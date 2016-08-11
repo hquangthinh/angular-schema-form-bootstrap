@@ -7,8 +7,9 @@
            sf-field-model
            schema-validate="form"
            class="{{form.fieldHtmlClass}}"
-           name="{{form.key.slice(-1)[0]}}">
+           name="{{form.key.slice(-1)[0]}}" icheck>
     <span ng-bind-html="form.title"></span>
+    <abbr ng-if="form.isRequired">*</abbr>
   </label>
   <div class="help-block" sf-message="form.description"></div>
 </div>
