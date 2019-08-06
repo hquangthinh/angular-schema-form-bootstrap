@@ -1,9 +1,5 @@
-Fork of Angular Bootstrap Decorator
-==========================
-
-<<<<<<< HEAD
 This is fork of https://github.com/json-schema-form/angular-schema-form-bootstrap
-=======
+
 For https://github.com/json-schema-form/angular-schema-form
 
 This is the new Bootstrap Decorator! That means a Bootstrap 3 frontend for the Angular Schema Form
@@ -59,4 +55,4 @@ npm install
 ```
 Then read package.json for the available scripts.
 **Note** templates are compiled so the templates script must be run after changes.
->>>>>>> cb42c26504e4533edfb347d2cb04be7d702619f8
+
