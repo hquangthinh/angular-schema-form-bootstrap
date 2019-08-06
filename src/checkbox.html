@@ -1,15 +1,16 @@
 <div class="checkbox checkbox-primary schema-form-checkbox {{form.htmlClass}}"
      ng-class="{'has-error': form.disableErrorState !== true &&  hasError(), 'has-success': form.disableSuccessState !== true &&  hasSuccess()}">
-  <label class="{{form.labelHtmlClass}}">
     <input type="checkbox"
            sf-changed="form"
            ng-disabled="form.readonly"
            sf-field-model
            schema-validate="form"
            class="{{form.fieldHtmlClass}}"
-           name="{{form.key.slice(-1)[0]}}">
-    <span ng-bind-html="form.title"></span>
-    <abbr ng-if="form.isRequired">*</abbr>
-  </label>
+           name="{{form.key.slice(-1)[0]}}"
+           id="{{form.key.slice(-1)[0]}}">
+    <label for="{{form.key.slice(-1)[0]}}">
+      <span ng-bind-html="form.title"></span>
+      <abbr ng-if="form.isRequired">*</abbr>
+    </label>  
   <div class="help-block" sf-message="form.description"></div>
 </div>
