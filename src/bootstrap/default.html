@@ -1,11 +1,3 @@
-<<<<<<< HEAD:src/default.html
-<div class="form-group {{form.htmlClass}}"
-     ng-class="{ '{{'schema-form-' + form.type}}': true, 'has-error': form.disableErrorState !== true && hasError(), 'has-success': form.disableSuccessState !== true && hasSuccess(), 'has-feedback': form.feedback !== false }">
-  <label class="control-label {{form.labelHtmlClass}}" ng-class="{'sr-only': !showTitle()}" for="{{form.key.slice(-1)[0]}}">
-    {{form.title}}
-    <abbr ng-if="form.isRequired">*</abbr>
-  </label>
-=======
 <div class="form-group {{::form.htmlClass + ' schema-form-' + form.type + ' ' + idClass}}"
      ng-class="{
        'has-error': form.disableErrorState !== true && hasError(),
@@ -13,8 +5,10 @@
        'has-feedback': form.feedback !== false,
        'required': form.required === true
      }">
-  <label class="control-label {{::form.labelHtmlClass}}" ng-class="{'sr-only': !showTitle()}" for="{{::fieldId(true, false)}}">{{form.title}}</label>
->>>>>>> cb42c26504e4533edfb347d2cb04be7d702619f8:src/bootstrap/default.html
+  <label class="control-label {{::form.labelHtmlClass}}" ng-class="{'sr-only': !showTitle()}" for="{{::fieldId(true, false)}}">
+    {{form.title}} 
+    <abbr ng-if="form.isRequired">*</abbr>
+  </label>
 
   <input ng-if="!form.fieldAddonLeft && !form.fieldAddonRight"
          ng-show="::form.key"

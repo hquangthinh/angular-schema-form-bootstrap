@@ -1,4 +1,4 @@
-<div class="checkbox schema-form-checkbox {{::form.htmlClass + ' ' + idClass}}"
+<div class="checkbox checkbox-primary schema-form-checkbox {{::form.htmlClass + ' ' + idClass}}"
      ng-class="{
        'has-error': form.disableErrorState !== true && hasError(),
        'has-success': form.disableSuccessState !== true && hasSuccess(),
@@ -14,6 +14,7 @@
            class="{{::form.fieldHtmlClass}}"
            name="{{::fieldId(true, false)}}">
     <span ng-bind-html="form.title"></span>
+    <abbr ng-if="form.isRequired">*</abbr>
   </label>
   <div class="help-block" sf-message="form.description"></div>
 </div>

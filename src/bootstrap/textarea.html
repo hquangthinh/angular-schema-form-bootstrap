@@ -5,7 +5,10 @@
        'has-feedback': form.feedback !== false,
        'required': form.required === true
      }">
-  <label class="control-label {{::form.labelHtmlClass}}" ng-class="{'sr-only': !showTitle()}" for="{{::fieldId(true, false)}}">{{form.title}}</label>
+  <label class="control-label {{::form.labelHtmlClass}}" ng-class="{'sr-only': !showTitle()}" for="{{::fieldId(true, false)}}">
+    {{form.title}}
+    <abbr ng-if="form.isRequired">*</abbr>
+  </label>
 
   <textarea ng-if="!form.fieldAddonLeft && !form.fieldAddonRight"
             class="form-control {{::form.fieldHtmlClass}}"

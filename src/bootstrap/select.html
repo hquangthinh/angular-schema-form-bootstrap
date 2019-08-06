@@ -7,6 +7,7 @@
      }">
   <label class="control-label {{::form.labelHtmlClass}}" ng-show="showTitle()" for="{{::fieldId(true, false)}}">
     {{form.title}}
+    <abbr ng-if="form.isRequired">*</abbr>
   </label>
   <select sf-field-model
           id="{{::fieldId(true, false)}}"
